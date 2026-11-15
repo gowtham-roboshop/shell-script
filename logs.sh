@@ -11,7 +11,7 @@ fi
 logs_folder="/var/logs/shell-script"
 log_file="${logs_folder}/$0.log"
 
-mkdir -p ${log_folder}
+mkdir -p ${logs_folder}
 
 validate () {
     if [ $1 -ne 0 ]

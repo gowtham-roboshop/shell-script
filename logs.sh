@@ -21,7 +21,7 @@ validate () {
         echo "$2 failed" | tee -a $log_file
         exit 1
     else
-        echo"$2 success" | tee -a $log_file
+        echo "$2 success" | tee -a $log_file
     fi
 }
 

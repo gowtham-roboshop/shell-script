@@ -14,7 +14,7 @@ mkdir -p $logs_folder
 
 echo "script started executing at $(date +"%F %T")" &>> $log_file
 
-for package in @
+for package in $@
 do 
     dnf list installed $package &>> $log_file
     if [ $? -ne 0 ]

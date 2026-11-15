@@ -4,7 +4,7 @@ user_id=$(id -u)
 logs_folder="/var/logs/shell-script"
 log_file="${logs_folder}/$0.log"
 
-if [$user_id -ne 0]
+if [ $user_id -ne 0 ]
 then
     echo "please run the script with user"
     exit 1
@@ -17,7 +17,7 @@ echo "script started executing at $(date +"%F %T")" &>> $log_file
 for package in @
 do 
     dnf list installed $package &>> $log_file
-    if [ $? -ne 0]
+    if [ $? -ne 0 ]
     then
         echo "going to install ${package}"
         dnf install $package -y &>> log_file

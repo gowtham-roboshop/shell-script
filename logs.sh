@@ -13,7 +13,7 @@ log_file="${logs_folder}/$0.log"
 
 mkdir -p ${logs_folder}
 
-echo "Script started execution at $(date +"%F %T")" &>> $logs_file
+echo "Script started execution at $(date +"%F %T")" &>> $log_file
 
 validate () {
     if [ $1 -ne 0 ]

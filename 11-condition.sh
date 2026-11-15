@@ -7,7 +7,7 @@ then
     echo "please run the script with root user"
 fi
 
-dnf install nginxx -y 
+dnf install nginx -y 
 
 if [ $? -ne 0 ]
 then
